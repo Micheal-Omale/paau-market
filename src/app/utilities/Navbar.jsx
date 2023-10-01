@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div style={{ background: "red" }}>
+    <div className="bg-red-500">
       <h1>Home</h1>
       <Link to="/">Home</Link>
       <Link to="/register">Sign Up</Link> <br />

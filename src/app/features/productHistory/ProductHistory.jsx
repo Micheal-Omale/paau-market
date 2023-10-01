@@ -24,9 +24,10 @@ const ProductHistory = ({ user: { id } }) => {
 
   async function removeItem(id) {
     const productId = id;
-    const { _id: phoneNumberId } = phoneNumbers.filter(
+    console.log(phoneNumbers);
+    const { _id: phoneNumberId } = phoneNumbers.find(
       (phoneNumber) => phoneNumber.productId === id
-    )[0];
+    );
 
     const {
       data: { isDeleted, message, newProducts, newPhoneNumbers },
