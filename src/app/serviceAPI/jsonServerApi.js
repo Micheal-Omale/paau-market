@@ -15,6 +15,13 @@ export const jsonServerApi = createApi({
       }),
     }),
 
+    logout: builder.mutation({
+      query: () => ({
+        url: "/logout",
+        method: "POST",
+      }),
+    }),
+
     deleteProduct: builder.mutation({
       query: (body) => ({
         url: "delete_product",
@@ -66,4 +73,5 @@ export const {
   useGetProductPhoneNumbersQuery,
   useEditProductMutation,
   useDeleteProductMutation,
+  useLogoutMutation,
 } = jsonServerApi;

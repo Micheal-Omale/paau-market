@@ -26,27 +26,27 @@ function Product(props) {
     })();
   }, []);
 
+  const priceComma = Intl.NumberFormat();
   return (
-    /********************************
-     *      REMOVE STYLE LATER      *
-     ********************************/
-    <article
-      style={{
-        border: "1px solid",
-        padding: "2rem",
-        display: "inline-block",
-        margin: "1rem",
-      }}
-    >
-      <Link style={{ display: "block" }} to={`/product/${_id}`}>
-        <img src={imgURL} alt={description} width={200} />
+    <article className="bg-white p-5 rounded-2xl shadow-sm ">
+      <Link to={`/product/${_id}`}>
+        <div
+          className="before:table before:pt-[120%] bg-cover bg-[50%] bg-no-repeat relative rounded-2xl"
+          style={{ backgroundImage: `url('${imgURL}')` }}
+        ></div>
       </Link>
-      <div>
-        <p>{description}</p>
-        <p>{price}</p>
+      <div className="pt-5 text-sm capitalize space-y-2">
+        <div>
+          <p className="font-bold ">{description}</p>
+          <p>&#x20A6; {priceComma.format(price)}</p>
+        </div>
 
         {!isLoggedIn ? (
-          <Link to="/login" state={{ background: location }}>
+          <Link
+            to="/login"
+            state={{ background: location }}
+            className="font-bold block bg-mantis-400 text-center text-white rounded-full py-2"
+          >
             Buy
           </Link>
         ) : (
