@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Category from "../category/Category";
-import Product from "./Project";
+import Product from "./Product";
 
 export const ProductContext = React.createContext();
 
@@ -36,20 +36,18 @@ function ProductsList() {
   return (
     !isLoading && (
       <section>
-        <div style={{ background: "green", fontSize: "2rem" }}>
-          Advertisement
-        </div>
         <ProductContext.Provider value={{ isLoggedIn }}>
           {categories.map((category) => {
             return (
               <article key={category.id}>
                 <Category category={category.category} />
-
-                {products.map((product) => {
-                  if (category.category === product.category) {
-                    return <Product key={product._id} {...product} />;
-                  }
-                })}
+                <div className="grid md:grid-cols-4 grid-cols-2 gap-2 md:gap-5 py-5">
+                  {products.map((product) => {
+                    if (category.category === product.category) {
+                      return <Product key={product._id} {...product} />;
+                    }
+                  })}
+                </div>
               </article>
             );
           })}
