@@ -4,5 +4,5 @@
 </a>
 </div>
 
-<h1> Paau Market Web Application</h1>
+<h1 align="center"> Paau Market Web Application</h1>
 <p align="center"><b>Paau Market is a dynamic MERN eCommerce application.</b></p>
