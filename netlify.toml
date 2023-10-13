@@ -1,11 +1,11 @@
 [[redirects]]
-  from = "/api/*"
+  from = "/api/"
   to = "https://paaumarketserver.onrender.com/api/:splat"
   status = 200
   force = true
   headers = {X-Form = "Netlify"}
 
-  from = "/storage/*"
+  from = "/storage/"
   to = "https://paaumarketserver.onrender.com/storage/:splat"
   status = 200
   force = true
