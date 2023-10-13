@@ -5,6 +5,7 @@
   force = true
   headers = {X-Form = "Netlify"}
 
+[[redirects]]
   from = "/storage/*"
   to = "https://paaumarketserver.onrender.com/storage/:splat"
   status = 200
