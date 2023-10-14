@@ -11,3 +11,8 @@
   status = 200
   force = true
   headers = {X-Form = "Netlify"}
+
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+  status = 200
